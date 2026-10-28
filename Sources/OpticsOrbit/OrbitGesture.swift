@@ -94,7 +94,7 @@ public final class OrbitGestureController: NSObject, UIGestureRecognizerDelegate
 
     /// 手势累积用的相机副本
     public private(set) var camera: OrbitCamera
-    /// 是否启用双指拖拽平移（量子实验室只做旋转）
+    /// 是否启用双指拖拽平移（量子轨迹视口只做旋转）
     public let allowsTwoFingerPan: Bool
 
     /// 单指拖拽写谁。`.object` 时相机 yaw/elevation **完全不写**（该模式要的
@@ -113,7 +113,7 @@ public final class OrbitGestureController: NSObject, UIGestureRecognizerDelegate
 
     // MARK: 覆盖层（切磨 gizmo）手势托管
     //
-    // 存在理由：切磨工作台的手柄层（角度弧桥 / 分度环 / 深度杆）曾经是盖在
+    // 存在理由：宿主覆盖层（如切磨 gizmo 手柄：角度弧桥 / 分度环 / 深度杆）曾经是盖在
     // MTKView 上的一个 SwiftUI Canvas，自带 DragGesture。即便用
     // `.simultaneousGesture(isEnabled:hovering)`，在 Mac Catalyst 上覆盖层
     // 仍会参与命中测试、吃掉滚轮与拖拽 —— 表现为「加一层切割涂层后鼠标转不动

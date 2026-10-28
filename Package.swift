@@ -24,5 +24,12 @@ let package = Package(
             name: "OpticsOrbit",
             dependencies: ["OpticsCore"]
         ),
+        .testTarget(
+            name: "OpticsCoreTests",
+            dependencies: ["OpticsCore"],
+            resources: [
+                .copy("Fixtures")
+            ]
+        ),
     ]
 )

@@ -215,7 +215,7 @@ public struct OpticsCellState {
 }
 
 /// 光轴指示层渲染输入：叠加在主结果之上的紫色发光虚线
-/// （量子实验室光线同款：核心线 + 柔和辉光，屏幕空间画）。
+/// （与量子轨迹光线同款：核心线 + 柔和辉光，屏幕空间画）。
 /// 打包与 optics_lab.metal 轴段逐字段对应——每根 3×SIMD4：
 /// (a.xyz, 线宽px) (b.xyz, 0) (rgb, alpha)。坐标系必须是网格归一化系
 /// （AABB 居中、最长边→[-1,1]，与 OpticsMeshBuilder 同变换）。
@@ -228,7 +228,7 @@ public struct OpticsAxisState {
 
     public var capsuleCount: Int { capsules.count / 3 }
 
-    // 256：切磨工作台的刀口描边一条盖面边一根胶囊（×32 圈可达 ~160 根）；
+    // 256：宿主 gizmo 的刀口描边一条盖面边一根胶囊（×32 圈可达 ~160 根）；
     // shader 按 axisParams.x 提前 break，上限抬高不增运行时开销
     public static let maxCapsules = 256
 }

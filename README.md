@@ -8,8 +8,10 @@ Metal 光谱光学渲染引擎（spectral path-traced optics renderer for iOS/ma
 | 阶段 | 状态 |
 |---|---|
 | P0 许可与来源合规 | ✅ 完成（见 `docs/compliance/PROVENANCE.md`） |
-| P1 机械提取（SPM 骨架 + 引擎源码 public 化 + `makeLibrary(source:)` 加载） | ✅ 完成（MSL 独立编译 / 双平台 typecheck / SwiftPM build / macOS 运行时冒烟全绿） |
-| P2 去域化清洗 / P3 测试迁移 / P4 文档与 Example / P5 发布 0.1.0 | ⬜ 未开始 |
+| P1 机械提取（SPM 骨架 + 引擎源码 public 化 + `makeLibrary(source:)` 加载） | ✅ 完成 |
+| P2 去域化清洗 | ✅ 完成（App 内部概念引用已清除；域术语保留） |
+| P3 测试迁移 | ✅ 完成（32 个测试全绿：Uniform 二进制布局、BVH/求交、偏光姿态、照明体表、**GPU↔CPU 逐像素 diff harness**、真实设备渲染器冒烟） |
+| P4 文档与 Example / P5 发布 0.1.0 | ⬜ 未开始 |
 
 ## 能力（规划）
 
