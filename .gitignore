@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+.build/
+DerivedData/
+xcuserdata/
+*.xcodeproj
+*.xcworkspace
+Package.resolved
