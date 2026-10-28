@@ -24,6 +24,12 @@ let package = Package(
             name: "OpticsOrbit",
             dependencies: ["OpticsCore"]
         ),
+        // macOS 最小示例（AppKit + MetalKit）：swift run OpticsExample
+        .executableTarget(
+            name: "OpticsExample",
+            dependencies: ["OpticsCore"],
+            path: "Example/OpticsExample"
+        ),
         .testTarget(
             name: "OpticsCoreTests",
             dependencies: ["OpticsCore"],
